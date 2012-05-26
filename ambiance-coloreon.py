@@ -11,6 +11,20 @@ GCONF = gconf.client_get_default()
 
 
 
+def parse_color_hex(argument):
+
+	"""Parses a string, which may just as well be a system argument, for a hash-less hexadecimal encoded color string."""
+	
+	color_hex = argument
+	
+	#clean
+	#count
+	#lowercase
+	#characters
+	
+	return color_hex
+	
+
 def colorize_gtk_theme(color_hex):
 
 	"""This function colorizes Ambience GTK theme given a hexadecimal color value as a string.
@@ -70,5 +84,5 @@ def change_theme():
 	
 	
 	
-colorize_gtk_theme(sys.argv[1])
+colorize_gtk_theme(parse_color_hex(sys.argv[1]))
 change_theme()
