@@ -41,7 +41,7 @@ def colorize_gtk_theme(color_hex):
 			sources.write(line)
 
 
-def colorize_metacity_theme(hue, sat):
+def colorize_metacity_theme(color_hex):
 
 	"""This function colorizes the Ambience Metacity theme.
 	
