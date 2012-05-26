@@ -11,12 +11,13 @@ GCONF = gconf.client_get_default()
 
 class Daemon:
     def __init__ (self):
-        BG.connect("changed::picture-uri", self.change_theme)
+        #BG.connect("changed::picture-uri", self.change_theme)
+	pass
 
     def change_theme (self, *_):
-        print "Waiting a few seconds before applying the changes..."
-        time.sleep(3)
-        self.write_changes(self.get_color ())
+        #print "Waiting a few seconds before applying the changes..."
+        #time.sleep(3)
+        self.write_changes("3355FF")
         GCONF.set_string("/apps/metacity/general/theme", "Ambiance")
         GSETTINGS.set_string("gtk-theme", "Ambiance")
         GSETTINGS.set_string("gtk-theme", "Ambiance-chameleon")
@@ -51,4 +52,5 @@ class Daemon:
 
 if __name__ == "__main__":
     daemon = Daemon()
-    GObject.MainLoop().run()
+    daemon.change_theme()
+    #GObject.MainLoop().run()
