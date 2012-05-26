@@ -79,7 +79,7 @@ def change_theme():
 	reset_theme()
 	
 	GSETTINGS.set_string("gtk-theme", "Ambiance-coloreon")
-	GCONF.set_string("/apps/metacity/general/theme", "Ambiance")
+	GCONF.set_string("/apps/metacity/general/theme", "Ambiance-coloreon")
 	
 	
 	
