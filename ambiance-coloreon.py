@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import re, os
+import re, os, sys
 from gi.repository import GLib, Gio, GObject
 import shutil
 import gconf
@@ -70,6 +70,5 @@ def change_theme():
 	
 	
 	
-colorize_gtk_theme("115533")
-colorize_metacity_theme("115533")
+colorize_gtk_theme(sys.argv[1])
 change_theme()
