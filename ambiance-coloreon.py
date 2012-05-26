@@ -1,9 +1,9 @@
+#!/usr/bin/env python
+
 import re, os
 from gi.repository import GLib, Gio, GObject
 import shutil
 import gconf
-
-
 
 USER = os.getenv('USER')
 GSETTINGS = Gio.Settings.new("org.gnome.desktop.interface")
