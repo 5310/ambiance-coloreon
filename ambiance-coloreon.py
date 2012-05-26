@@ -15,14 +15,13 @@ def parse_color_hex(argument):
 
 	"""Parses a string, which may just as well be a system argument, for a hash-less hexadecimal encoded color string."""
 	
-	color_hex = argument
-	
-	#clean
-	#count
-	#lowercase
-	#characters
-	
-	return color_hex
+	if len(argument) != 6:
+		raise Exception("Color value is not the right length!")
+	else:
+		if False in [i in "0123456789abcdef" for i in argument.lower()]:
+			raise Exception("Color value contains characters outside of hexadecimal!")
+		else:
+			return argument
 	
 
 def colorize_gtk_theme(color_hex):
