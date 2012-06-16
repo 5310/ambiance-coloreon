@@ -27,7 +27,7 @@ def parse_color_hex(argument):
 
 def colorize_gtk_theme(color_hex):
 
-	"""This function colorizes Ambience GTK theme given a hexadecimal color value as a string.
+	"""This function colorizes Ambiance GTK theme given a hexadecimal color value as a string.
 	
 	It first duplicates the original theme to the user's theme override directory.
 	And then replaces all ocurrences of the highlight color to that supplied by its argument.	
@@ -57,10 +57,10 @@ def colorize_gtk_theme(color_hex):
 
 def colorize_metacity_theme(color_hex):
 
-	"""This function colorizes the Ambience Metacity theme.
+	"""This function colorizes the Ambiance Metacity theme.
 	
 	It first converts the chosen color to HSV, and calculates the offset values for Imagemagick.
-	Then, it duplicates all the colored images from Ambience to Ambience-coloreon anew,
+	Then, it duplicates all the colored images from Ambiance to Ambiance-coloreon anew,
 	converts them to RGBA and applies the ImageMagick modulation function on them.
 	"""
 	
@@ -102,7 +102,7 @@ def colorize_metacity_theme(color_hex):
 	
 def reset_theme():
 
-	"""Sets the user's themes to the default Ambience ones."""
+	"""Sets the user's themes to the default Ambiance ones."""
 
 	GSETTINGS.set_string("gtk-theme", "Ambiance")
 	GCONF.set_string("/apps/metacity/general/theme", "Ambiance")
